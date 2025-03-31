@@ -28,7 +28,7 @@ def get_db_connection():
         cursorclass=pymysql.cursors.DictCursor
     )
 
-@app.route("/api/employees", methods=["GET"])
+@app.route("/api/heroes", methods=["GET"])
 def fetch_data():
     """Fetches employee data."""
     try:
