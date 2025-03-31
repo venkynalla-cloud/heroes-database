@@ -34,7 +34,7 @@ def fetch_data():
     try:
         connection = get_db_connection()
         with connection.cursor() as cursor:
-            cursor.execute("SELECT id, first_name, last_name, email FROM employee LIMIT 10")
+            cursor.execute("SELECT id, first_name, last_name, email FROM heroes LIMIT 10")
             data = cursor.fetchall()
         connection.close()
         return jsonify(data)
